@@ -1,14 +1,45 @@
 <script type="text/discourse-plugin" version="0.8.20">
-  const globalNotices = settings.Global_notices;
-
-  if(!globalNotices.length) return;
-
-  const h = require("virtual-dom").h;
-
-  globalNotices.split("|").map( i => {
-    const seg = $.map(i.split(","), $.trim);
-  })
+  const settings = { 
+    Global_notices: "https://meta.discourse.org, Card Title, blue, This is the card content|https://meta.discourse.org/2, Card Title 2, green, This is the card content 2"
+  }
   
-  console.log(globalNotices);
-
+  const customGlobalNotices = settings.Global_notices;
+  
+  if(!customGlobalNotices.length) return;
+  
+  const h = require("virtual-dom").h;
+  const globalNotices = [];
+  
+  customGlobalNotices.split('|').map(i => {
+    const notice = i.split(',').map(j => j.trim())
+    const URL = notice[0];
+    const title = notice[1];
+    const titleColor = notice[2];
+    const content = notice[3];
+  
+    globalNotices.push(
+      h(
+        'a.global-notice-cell',
+        {
+          href: URL,
+          target: blank
+        },
+        h(
+          'h6.global-notice-cell-header',
+          {
+            style: `color: ${titleColor}`
+          },
+          title
+        ),
+        h(
+          'span.global-notice-cell-content',
+          content
+        )
+      )
+    )
+  });
+  
+  api.decorateWidget('global-notice-row', helper => {
+    return headerLinks
+  })
 </script>
