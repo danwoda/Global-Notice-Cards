@@ -1,5 +1,6 @@
 {
   "name": "Global Notice Cards",
   "about_url": "https://github.com/IdentityDan/Global-Notice-Cards",
-  "license_url": "https://github.com/IdentityDan/global-notice-cardgots/blob/master/LICENSE"
+  "license_url": "https://github.com/IdentityDan/global-notice-cardgots/blob/master/LICENSE",
+  "component": true
 }
