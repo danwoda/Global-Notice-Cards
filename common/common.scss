@@ -1,0 +1,82 @@
+#global-notice-alert-emails-disabled {
+  display: none;
+}
+
+#global-notice-alert-global-notice {
+width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  min-height: 200px;
+  background: #f5f5f5;
+  margin-top: -28px;
+  padding: 0px;
+}
+
+#global-notice-container {
+max-width: 1111px;
+  margin: 0px auto;
+  padding: 10px 0px;
+  display: table;
+  border-collapse: separate;
+  border-spacing: 15px;
+}
+
+.global-notice-row {
+margin: 0px;
+display:table-row;
+}
+
+#global-notice-header {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 0px;
+}
+
+.global-notice-cell {
+width: 258px;
+  height: 118px;
+  display: table-cell;
+  background-color: white;
+  padding: 24px 20px;
+  background: #FFFFFF;
+  border: 1px solid #E9E9E9;
+  box-sizing: border-box;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.16);
+  border-radius: 3px;
+  transition: box-shadow 0.20s;
+}
+
+.global-notice-cell:hover {
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.23);
+}
+
+.global-notice-cell-header {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 13px;
+  line-height: 24px;
+}
+
+.global-notice-cell-content {
+  font-family: Roboto;
+  font-style: normal;
+  font-size: 15px;
+  line-height: 24px;
+  color: #919191;
+}
+
+.global-notice-cell-header-orange {
+  color: #EB5423;
+}
+.global-notice-cell-header-blue {
+  color: #0088CC;
+}
+.global-notice-cell-header-purple {
+  color: #E71BB8;
+}
