@@ -1,0 +1,5 @@
+Global_notices:
+  type: list
+  default: "https://meta.discourse.org, Card Title, blue, This is the card content"
+  description:
+    en: "Comma delimited in this order: URL, card title, title color, card content"
