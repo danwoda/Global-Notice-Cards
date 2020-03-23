@@ -1,43 +1,8 @@
 <script type="text/discourse-plugin" version="0.8.20">
-  const customGlobalNotices = settings.Global_notices;
-  
-  if(!customGlobalNotices.length) return;
-  
   const h = require("virtual-dom").h;
-  const globalNotices = [];
-  
-  customGlobalNotices.split('|').map(i => {
-    const notice = i.split(',').map(j => j.trim())
-    const URL = notice[0];
-    const title = notice[1];
-    const titleColor = notice[2];
-    const content = notice[3];
-  
-    globalNotices.push(
-      h(
-        'a.global-notice-cell',
-        {
-          href: URL,
-          target: blank
-        },
-        h(
-          'h6.global-notice-cell-header',
-          {
-            style: `color: ${titleColor}`
-          },
-          title
-        ),
-        h(
-          'span.global-notice-cell-content',
-          content
-        )
-      )
-    )
+  api.decorateWidget(linksPosition, helper => {
+    return helper.h(
+      'h6.global-notice-cell-header', 'Hello World'
+    );
   });
-
-  console.log(globalNotices);
-  
-  <!-- api.decorateWidget('global-notice-row', helper => {
-    return headerLinks
-  }) -->
 </script>
