@@ -4,6 +4,10 @@
   if(!globalNotices.length) return;
 
   const h = require("virtual-dom").h;
+
+  globalNotices.split("|").map( i => {
+    const seg = $.map(i.split(","), $.trim);
+  })
   
   console.log(globalNotices);
 
